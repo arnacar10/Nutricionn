@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,65 +9,219 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#chivas">Chivas</a></li>
-        <li><a href="#vacas">Vacas</a></li>
-        <li><a href="#gallinas">Gallinas</a></li>
-        <li><a href="#cerdos">Cerdos</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="chivas">
-      <h1>Nutrición para Chivas</h1>
-      <form>
-        <label>Peso de la chiva (kg):</label>
-        <input type="number" id="peso-chiva" required>
-        <button type="button" onclick="calcularNutricionChiva()">Calcular Nutrición</button>
-        <p id="resultado-chiva"></p>
-        <div id="alimentos-chiva"></div>
-      </form>
-    </section>
-    <section id="vacas">
-      <h1>Nutrición para Vacas</h1>
-      <form>
-        <label>Peso de la vaca (kg):</label>
-        <input type="number" id="peso-vaca" required>
-        <label>Etapa de la vaca:</label>
-        <select id="etapa-vaca" required>
-          <option value="">Seleccione una etapa</option>
-          <option value="gestante">Gestante</option>
-          <option value="lechera">Lechera</option>
-          <option value="engorde">Engorde</option>
-        </select>
-        <button type="button" onclick="calcularNutricionVaca()">Calcular Nutrición</button>
-        <p id="resultado-vaca"></p>
-        <div id="alimentos-vaca"></div>
-      </form>
-    </section>
-    <section id="gallinas">
-      <h1>Nutrición para Gallinas</h1>
-      <form>
-        <label>Peso de la gallina (kg):</label>
-        <input type="number" id="peso-gallina" required>
-        <button type="button" onclick="calcularNutricionGallina()">Calcular Nutrición</button>
-        <p id="resultado-gallina"></p>
-        <div id="alimentos-gallina"></div>
-      </form>
-    </section>
-    <section id="cerdos">
-      <h1>Nutrición para Cerdos</h1>
-      <form>
-        <label>Peso del cerdo (kg):</label>
-        <input type="number" id="peso-cerdo" required>
-        <button type="button" onclick="calcularNutricionCerdo()">Calcular Nutrición</button>
-        <p id="resultado-cerdo"></p>
-        <div id="alimentos-cerdo"></div>
-      </form>
-    </section>
-  </main>
-  <script src="script.js"></script>
+  <div id="pantalla-bienvenida">
+    <h1>Bienvenido a Nutrivida Animal</h1>
+    <p>La nutrición es una parte fundamental del cuidado y bienestar de nuestros animales. Una dieta equilibrada y adecuada es esencial para mantener la salud y el bienestar de nuestros animales.</p>
+    <p>En este sitio web, podrás encontrar información y herramientas para ayudarte a cuidar a tus animales y asegurarte de que reciban la nutrición que necesitan para vivir una vida saludable y feliz.</p>
+    <button id="boton-ingresar">Ingresar</button>
+    <button id="boton-tabla-nutricional" class="boton-estilo">Tabla de composición nutricional</button>
+  </div>
+  <div id="pantalla-principal" style="display: none;">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#chivas">Chivas</a></li>
+          <li><a href="#vacas">Vacas</a></li>
+          <li><a href="#gallinas">Gallinas</a></li>
+          <li><a href="#cerdos">Cerdos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="chivas">
+        <h1>Nutrición para Chivas</h1>
+        <form>
+          <label>Peso de la chiva (kg):</label>
+          <input type="number" id="peso-chiva" required>
+          <button type="button" onclick="calcularNutricionChiva()">Calcular Nutrición</button>
+          <p id="resultado-chiva"></p>
+          <div id="alimentos-chiva"></div>
+        </form>
+      </section>
+      <section id="vacas">
+        <h1>Nutrición para Vacas</h1>
+        <form>
+          <label>Peso de la vaca (kg):</label>
+          <input type="number" id="peso-vaca" required>
+          <label>Etapa de la vaca:</label>
+          <select id="etapa-vaca" required>
+            <option value="">Seleccione una etapa</option>
+            <option value="gestante">Gestante</option>
+            <option value="lechera">Lechera</option>
+            <option value="engorde">Engorde</option>
+          </select>
+          <button type="button" onclick="calcularNutricionVaca()">Calcular Nutrición</button>
+          <p id="resultado-vaca"></p>
+          <div id="alimentos-vaca"></div>
+        </form>
+      </section>
+      <section id="gallinas">
+        <h1>Nutrición para Gallinas</h1>
+        <form>
+          <label>Peso de la gallina (kg):</label>
+          <input type="number" id="peso-gallina" required>
+          <button type="button" onclick="calcularNutricionGallina()">Calcular Nutrición</button>
+          <p id="resultado-gallina"></p>
+          <div id="alimentos-gallina"></div>
+        </form>
+      </section>
+      <section id="cerdos">
+        <h1>Nutrición para Cerdos</h1>
+        <form>
+          <label>Peso del cerdo (kg):</label>
+          <input type="number" id="peso-cerdo" required>
+          <button type="button" onclick="calcularNutricionCerdo()">Calcular Nutrición</button>
+          <p id="resultado-cerdo"></p>
+          <div id="alimentos-cerdo"></div>
+        </form>
+      </section>
+    </main>
+    
+    <button id="boton-volver-bienvenida" class="boton-regresar">Volver a la pantalla de bienvenida</button>
+</div>
+<div id="pantalla-tabla-nutricional" style="display: none;">
+  <h1>Tabla de composición nutricional</h1>
+  <table id="tabla-nutricional">
+    <thead>
+      <tr>
+        <th>Alimento</th>
+        <th>Proteínas</th>
+        <th>Grasas</th>
+        <th>Carbohidratos</th>
+        <th>Vitaminas</th>
+        <th>Minerales</th>
+        <th>Energía (kcal/kg)</th>
+        <th>Fibra cruda</th>
+        <th>Humedad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Heno de alfalfa</td>
+        <td>15%</td>
+        <td>2%</td>
+        <td>60%</td>
+        <td>Vitamina A</td>
+        <td>Cálcio</td>
+        <td>2500</td>
+        <td>30%</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Grano de maíz</td>
+        <td>8%</td>
+        <td>4%</td>
+        <td>70%</td>
+        <td>Vitamina B</td>
+        <td>Fósforo</td>
+        <td>3500</td>
+        <td>2%</td>
+        <td>12%</td>
+      </tr>
+      <tr>
+        <td>Harina de soja</td>
+        <td>40%</td>
+        <td>20%</td>
+        <td>30%</td>
+        <td>Vitamina B12</td>
+        <td>Hierro</td>
+        <td>4000</td>
+        <td>5%</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Cebada para ganado</td>
+        <td>10%</td>
+        <td>2%</td>
+        <td>70%</td>
+        <td>Vitamina B</td>
+        <td>Fósforo</td>
+        <td>3200</td>
+        <td>5%</td>
+        <td>12%</td>
+      </tr>
+      <tr>
+        <td>Alfalfa para ganado</td>
+        <td>15%</td>
+        <td>2%</td>
+        <td>60%</td>
+        <td>Vitamina A</td>
+        <td>Cálcio</td>
+        <td>2500</td>
+        <td>30%</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Grano de trigo</td>
+        <td>10%</td>
+        <td>2%</td>
+        <td>70%</td>
+        <td>Vitamina B</td>
+        <td>Fósforo</td>
+        <td>3200</td>
+        <td>2%</td>
+        <td>12%</td>
+      </tr>
+      <tr>
+        <td>Harina de pescado</td>
+        <td>60%</td>
+        <td>20%</td>
+        <td>10%</td>
+        <td>Vitamina B12</td>
+        <td>Hierro</td>
+        <td>4000</td>
+        <td>0%</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Henolaje para chivas</td>
+        <td>10%</td>
+        <td>2%</td>
+        <td>70%</td>
+        <td>Vitamina A</td>
+        <td>Cálcio</td>
+        <td>2500</td>
+        <td>30%</td>
+        <td>10%</td>
+      </tr>
+    <tr>
+<td>Henolaje para gallinas</td>
+<td>12%</td>
+<td>3%</td>
+<td>70%</td>
+<td>Vitamina A</td>
+<td>Cálcio</td>
+<td>2800</td>
+<td>30%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>Henolaje para cerdos</td>
+<td>15%</td>
+<td>5%</td>
+<td>60%</td>
+<td>Vitamina B12</td>
+<td>Hierro</td>
+<td>3200</td>
+<td>20%</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>Henolaje para vacas</td>
+<td>12%</td>
+<td>3%</td>
+<td>70%</td>
+<td>Vitamina A</td>
+<td>Cálcio</td>
+<td>2800</td>
+<td>30%</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+<button id="boton-volver-bienvenida-tabla" class="boton-regresar">Volver a la pantalla de bienvenida</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
