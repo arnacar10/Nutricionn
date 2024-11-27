@@ -1,118 +1,256 @@
 /* Estilos generales */
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #555;
-}
-
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-header nav ul li {
-  margin-right: 20px;
-}
-
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-header nav a:hover {
-  color: #ccc;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-section {
-  background-color: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-label {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-input[type="number"] {
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button[type="button"] {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.2s ease;
-}
-
-button[type="button"]:hover {
-  background-color: #555;
-}
-
-#resultado {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #666;
-}
-
-#alimentos {
-  margin-bottom: 20px;
-}
-
-#alimentos ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#alimentos li {
-  margin-bottom: 10px;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-#alimentos li:last-child {
-  border-bottom: none;
-}
+    font-family: Arial, sans-serif;
+    background-color:   #f793ca; /* Rosa claro */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  header nav a:hover {
+    color: #ccc;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4CAF50; /* Verde */
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button[type="button"] {
+    padding: 10px 20px;
+    background-color: #ff69b4; /* Rosa fuerte */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #ff99cc; /* Rosa claro */
+  }
+  
+  #resultado {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  #alimentos {
+    margin-bottom: 20px;
+  }
+  
+  #alimentos ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #alimentos li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f7f7; /* Gris claro */
+  }
+  
+  #alimentos li:last-child {
+    border-bottom: none;
+  }
+  
+  #pantalla-bienvenida {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #pantalla-bienvenida h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #pantalla-bienvenida p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  #boton-ingresar {
+    width: 200px;
+    height: 40px;
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #boton-ingresar:hover {
+    background-color: #3e8e41; /* Verde oscuro */
+  }
+  
+  .boton-regresar {
+    background-color: #ff69b4; /* Rosa fuerte */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-regresar:hover {
+    background-color: #ff99cc; /* Rosa claro */
+  }
+  
+  .boton-tabla {
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-tabla:hover {
+    background-color: #3e8e41; /* Verde oscuro */
+  }
+  
+  .boton-estilo {
+    background-color: #ff69b4; /* Rosa fuerte */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .boton-estilo:hover {
+    background-color: #ff99cc; /* Rosa claro */
+  }
+  
+  #tabla-nutricional {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 60px auto 20px; /* Agregué un margen superior de 40px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #tabla-nutricional th, #tabla-nutricional td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333;
+  }
+  
+  #tabla-nutricional th {
+    background-color: #ff69b4; /* Rosa fuerte */
+    color: #fff;
+    font-weight: bold; /* Negrita */
+  }
+  
+  #tabla-nutricional tr:nth-child(even) {
+    background-color: #f9f9f9; /* Gris muy claro */
+  }
+  
+  #tabla-nutricional tr:hover {
+    background-color: #f2f2f2; /* Gris claro */
+  }
+  
+  #pantalla-tabla-nutricional {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+  }
+  
+  #pantalla-tabla-nutricional h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
