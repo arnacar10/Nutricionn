@@ -206,10 +206,16 @@ body {
   #tabla-nutricional {
     border-collapse: collapse;
     width: 100%;
-    margin: 60px auto 20px; /* Agregué un margen superior de 40px */
+    margin: 40px auto; /* Margen igual que la pantalla principal */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
     border-radius: 10px;
     overflow: hidden;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #tabla-nutricional {
+      margin: 20px auto; /* Margen igual que la pantalla principal para dispositivos móviles */
+    }
   }
   
   #tabla-nutricional th, #tabla-nutricional td {
@@ -232,25 +238,4 @@ body {
   
   #tabla-nutricional tr:hover {
     background-color: #f2f2f2; /* Gris claro */
-  }
-  
-  #pantalla-tabla-nutricional {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 80%;
-  }
-  
-  #pantalla-tabla-nutricional h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
   }
